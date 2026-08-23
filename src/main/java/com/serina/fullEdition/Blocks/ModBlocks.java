@@ -26,7 +26,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SALT_BLOCK=registerBlock("salt_block", properties -> new FallingBlock(properties.sound(SoundType.SAND).strength(1)) {@Override protected MapCodec<? extends FallingBlock> codec() {return null;}@Override public int getDustColor(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {return 0;}});
     public static final DeferredBlock<Block> SUGAR_CANE_BLOCK=registerBlock("sugar_cane_block",properties -> new RotatedPillarBlock(properties.sound(SoundType.HARD_CROP).strength(1)));
     public static final DeferredBlock<Block> RUBBER_LOG=registerBlock("rubber_log",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
+    public static final DeferredBlock<Block> CUT_RUBBER_LOG=registerBlock("cut_rubber_log",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1).noLootTable()));
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_LOG=registerBlock("stripped_rubber_log",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
+    public static final DeferredBlock<Block> CUT_STRIPPED_RUBBER_LOG=registerBlock("cut_stripped_rubber_log",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1).noLootTable()));
     public static final DeferredBlock<Block> RUBBER_WOOD=registerBlock("rubber_wood",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_WOOD=registerBlock("stripped_rubber_wood",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
     public static final DeferredBlock<Block> RUBBER_PLANKS=registerBlock("rubber_planks",properties -> new Block(properties.sound(SoundType.WOOD).strength(1)));
 
 

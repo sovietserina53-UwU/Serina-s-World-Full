@@ -72,6 +72,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 define('B',ModBlocks.RUBBER_LOG).
                 unlockedBy(getHasName(ModBlocks.RUBBER_LOG),has(ModBlocks.RUBBER_LOG)).
                 save(output);
+        shaped(RecipeCategory.MISC,ModBlocks.STRIPPED_RUBBER_WOOD,4).
+                pattern("BB ").
+                pattern("BB ").
+                pattern("   " +
+                        "").
+                define('B',ModBlocks.STRIPPED_RUBBER_LOG).
+                unlockedBy(getHasName(ModBlocks.RUBBER_LOG),has(ModBlocks.RUBBER_LOG)).
+                save(output);
         shaped(RecipeCategory.MISC,ModBlocks.RUBBER_LOG,4).
                 pattern("BB ").
                 pattern("BB ").
@@ -83,6 +91,10 @@ public class ModRecipeProvider extends RecipeProvider {
         shapeless(RecipeCategory.MISC,ModBlocks.RUBBER_PLANKS,4).
                 requires(ModBlocks.RUBBER_LOG).
                 unlockedBy(getHasName(ModBlocks.RUBBER_LOG),has(ModBlocks.RUBBER_LOG)).
+                save(output);
+        shapeless(RecipeCategory.MISC,ModBlocks.RUBBER_PLANKS,4).
+                requires(ModBlocks.STRIPPED_RUBBER_LOG).
+                unlockedBy(getHasName(ModBlocks.STRIPPED_RUBBER_LOG),has(ModBlocks.STRIPPED_RUBBER_LOG)).
                 save(output);
 //rubber planks
 //knifes (might be temporary)

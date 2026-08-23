@@ -24,6 +24,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 add(ModBlocks.getRK(ModBlocks.SUGAR_CANE_BLOCK.get())).
                 add(ModBlocks.getRK(ModBlocks.RUBBER_LOG.get())).
                 add(ModBlocks.getRK(ModBlocks.RUBBER_WOOD.get())).
-                add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get()))
+                add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get())).
+                add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_LOG.get())).
+                add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_WOOD.get())).
+                add(ModBlocks.getRK(ModBlocks.CUT_RUBBER_LOG.get())).
+                add(ModBlocks.getRK(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get()))
+
         ;}
 }

@@ -37,26 +37,14 @@ public class KnifeItem extends Item{
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
 
-        Vec3 whereIlookfrom=player.getEyePosition();
+        /*Vec3 whereIlookfrom=player.getEyePosition();
         Vec3 whereIenduplooking=whereIlookfrom.add(player.getViewVector(1.0f)).scale(5);
-        AABB box = player.getBoundingBox().expandTowards(whereIenduplooking.subtract(whereIlookfrom)).inflate(5.0);
-        EntityHitResult whosInFrontofme=ProjectileUtil.getEntityHitResult(player,whereIlookfrom,whereIenduplooking,box,entity -> entity instanceof LivingEntity,2);
+        AABB box = new AABB(whereIlookfrom, whereIenduplooking).inflate(1.0);
+        EntityHitResult whosInFrontofme=ProjectileUtil.getEntityHitResult(player,whereIlookfrom,whereIenduplooking,box,entity -> entity instanceof LivingEntity,10);
 
         DamageSource source=new DamageSource(level.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(DamageTypes.GENERIC));
 
-        if(time==0)
-        {
-            if(whosInFrontofme!=null)
-            {
-                Entity Target=whosInFrontofme.getEntity();
-                Target.hurt(source,5);
-                time=1;
-                ((Mob) Target).setNoAi(true);
-            }
-            else {}
-        }
-
-        else if (time>0)
+        if (time>0)
         {
             time++;
             System.out.println(time);
@@ -70,8 +58,25 @@ public class KnifeItem extends Item{
             else if(time==1000&&whosInFrontofme==null)
             {time=0;Entity Target=whosInFrontofme.getEntity();((Mob) Target).setNoAi(true);}
             else if(time==2000){time=0;}
+
+            if(time==0)
+            {
+                System.out.println("time 0");
+            if(whosInFrontofme!=null)
+            {
+                Entity Target=whosInFrontofme.getEntity();
+                Target.hurt(source,5);
+                time=1;
+                ((Mob) Target).setNoAi(true);
+                ((Mob) Target).tick();
+            }
+                else {
+                System.out.println("so sally can wait");
+
+            }
         }
 
+        }*/
         for(KnifeItemHelper.SharpenItems sharpenItems:KnifeItemHelper.SharpenItemsList())
         {
             if(player.getMainHandItem().is(sharpenItems.input()))
