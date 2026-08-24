@@ -24,8 +24,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RUBBER_WOOD.get());
         dropSelf(ModBlocks.RUBBER_PLANKS.get());
 
-        dropSelf(ModBlocks.CUT_RUBBER_LOG.get());
-        dropSelf(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get());
+
         dropSelf(ModBlocks.STRIPPED_RUBBER_LOG.get());
         dropSelf(ModBlocks.STRIPPED_RUBBER_WOOD.get());
 

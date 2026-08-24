@@ -101,11 +101,12 @@ public class KnifeItem extends Item{
         {
             for(KnifeItemHelper.outputRecord outputRecord:outputRecordList())
             {
-                if(state.is(outputRecord.blockinput()))
+                if(outputRecord.blockinput().test(state))
                 {
-                    level.setBlock(pos,outputRecord.blockoutput().defaultBlockState(),Block.UPDATE_ALL);
-                    Block.popResource(level,pos,new ItemStack(outputRecord.item(),outputRecord.amount()));
                     stack.hurtAndBreak(1,player, InteractionHand.MAIN_HAND);
+                    level.setBlock(pos,outputRecord.blockout().apply(context),Block.UPDATE_ALL);
+                    if(outputRecord.item()!=null&&outputRecord.amount()!=null)
+                    {Block.popResource(level,pos,new ItemStack(outputRecord.item(),outputRecord.amount()));}else{}
                     break;
                 }
             }

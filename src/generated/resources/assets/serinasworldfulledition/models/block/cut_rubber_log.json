@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "serinasworldfulledition:block/cut_rubber_log",
+    "side": "serinasworldfulledition:block/cut_rubber_log_side",
+    "top": "serinasworldfulledition:block/cut_rubber_log_top"
+  }
+}

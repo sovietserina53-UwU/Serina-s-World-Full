@@ -24,6 +24,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.SALT);
                 output.accept(ModItems.PEBBLE);
                 output.accept(ModItems.SHARP_PEBBLE);
+                output.accept(ModItems.FRESH_BOWL_OF_LATEX);
 
             }).build());
     public static final Supplier<CreativeModeTab> BLOCKS=CREATIVE_MODE_TAB.register("blocks",()-> CreativeModeTab.builder().
@@ -33,6 +34,11 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.SALT_BLOCK);
                 output.accept(ModBlocks.SUGAR_CANE_BLOCK);
                 output.accept(ModBlocks.RUBBER_LOG);
+                output.accept(ModBlocks.STRIPPED_RUBBER_LOG);
+                output.accept(ModBlocks.RUBBER_WOOD);
+                output.accept(ModBlocks.STRIPPED_RUBBER_WOOD);
+                output.accept(ModBlocks.CUT_RUBBER_LOG);
+                output.accept(ModBlocks.CUT_STRIPPED_RUBBER_LOG);
             }).build());
     public static final Supplier<CreativeModeTab> TOOLS=CREATIVE_MODE_TAB.register("tools",()-> CreativeModeTab.builder().
             title(Component.translatable("tools")).

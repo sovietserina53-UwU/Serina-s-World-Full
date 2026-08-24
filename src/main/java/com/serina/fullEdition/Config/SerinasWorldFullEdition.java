@@ -1,5 +1,6 @@
 package com.serina.fullEdition.Config;
 
+import com.serina.fullEdition.Blocks.ModBlockEntities;
 import com.serina.fullEdition.Blocks.ModBlocks;
 import com.serina.fullEdition.Items.ModItems;
 import com.serina.fullEdition.ModCreativeTabs;
@@ -15,9 +16,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-import static com.serina.fullEdition.Blocks.ModBlocks.BLOCKS;
-import static com.serina.fullEdition.Items.ModItems.ITEMS;
-
 
 @Mod(SerinasWorldFullEdition.MODID)
 public class SerinasWorldFullEdition {
@@ -32,6 +30,7 @@ public class SerinasWorldFullEdition {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

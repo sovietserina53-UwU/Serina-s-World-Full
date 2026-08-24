@@ -95,7 +95,7 @@ public class ModRecipeProvider extends RecipeProvider {
         shapeless(RecipeCategory.MISC,ModBlocks.RUBBER_PLANKS,4).
                 requires(ModBlocks.STRIPPED_RUBBER_LOG).
                 unlockedBy(getHasName(ModBlocks.STRIPPED_RUBBER_LOG),has(ModBlocks.STRIPPED_RUBBER_LOG)).
-                save(output);
+                save(output,"serinasworldfulledition:rubber_planks_from_stripped_rubber_log");
 //rubber planks
 //knifes (might be temporary)
         shaped(RecipeCategory.TOOLS,ModItems.RUDIMENTARY_BLADE).

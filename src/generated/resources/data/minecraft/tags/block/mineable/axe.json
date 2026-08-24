@@ -3,6 +3,10 @@
     "serinasworldfulledition:sugar_cane_block",
     "serinasworldfulledition:rubber_log",
     "serinasworldfulledition:rubber_wood",
-    "serinasworldfulledition:rubber_planks"
+    "serinasworldfulledition:rubber_planks",
+    "serinasworldfulledition:stripped_rubber_log",
+    "serinasworldfulledition:stripped_rubber_wood",
+    "serinasworldfulledition:cut_rubber_log",
+    "serinasworldfulledition:cut_stripped_rubber_log"
   ]
 }

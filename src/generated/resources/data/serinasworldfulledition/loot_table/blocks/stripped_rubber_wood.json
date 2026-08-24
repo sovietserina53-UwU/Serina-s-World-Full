@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "serinasworldfulledition:stripped_rubber_wood"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "serinasworldfulledition:blocks/stripped_rubber_wood"
+}
