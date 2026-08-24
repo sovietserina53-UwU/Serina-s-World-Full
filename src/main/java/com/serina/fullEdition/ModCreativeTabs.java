@@ -39,6 +39,9 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.STRIPPED_RUBBER_WOOD);
                 output.accept(ModBlocks.CUT_RUBBER_LOG);
                 output.accept(ModBlocks.CUT_STRIPPED_RUBBER_LOG);
+                output.accept(ModBlocks.RUBBER_LEAVES);
+                output.accept(ModBlocks.RUBBER_SAPLING);
+
             }).build());
     public static final Supplier<CreativeModeTab> TOOLS=CREATIVE_MODE_TAB.register("tools",()-> CreativeModeTab.builder().
             title(Component.translatable("tools")).

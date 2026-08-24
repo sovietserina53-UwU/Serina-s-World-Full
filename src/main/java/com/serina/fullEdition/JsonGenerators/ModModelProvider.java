@@ -49,6 +49,9 @@ public class ModModelProvider extends ModelProvider {
                 .put(TextureSlot.TOP, TextureMapping.getBlockTexture(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get(),"_top"))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get(),"_side"))
                 .put(TextureSlot.FRONT, TextureMapping.getBlockTexture(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get())));
+        blockModels.createTrivialCube(ModBlocks.RUBBER_LEAVES.get());
+        blockModels.createCrossBlock(ModBlocks.RUBBER_SAPLING.get(), BlockModelGenerators.PlantType.NOT_TINTED);
+
 
     }
 

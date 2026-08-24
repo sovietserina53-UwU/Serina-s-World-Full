@@ -5,15 +5,17 @@ import com.serina.fullEdition.Blocks.Types.BlockEntity.CutRubberLog.CutRubberLog
 import com.serina.fullEdition.Blocks.Types.NormalBlock.RubberLogBlock;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
 import com.serina.fullEdition.Items.ModItems;
+import com.serina.fullEdition.JsonGenerators.ModConfiguredFeature;
+import com.serina.fullEdition.JsonGenerators.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FallingBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
@@ -34,7 +36,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> RUBBER_WOOD=registerBlock("rubber_wood",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
     public static final DeferredBlock<Block> STRIPPED_RUBBER_WOOD=registerBlock("stripped_rubber_wood",properties -> new RotatedPillarBlock(properties.sound(SoundType.WOOD).strength(1)));
     public static final DeferredBlock<Block> RUBBER_PLANKS=registerBlock("rubber_planks",properties -> new Block(properties.sound(SoundType.WOOD).strength(1)));
-
+    public static final DeferredBlock<Block> RUBBER_LEAVES=registerBlock("rubber_leaves",properties -> new LeavesBlock(0.1f,properties) {@Override public MapCodec<? extends LeavesBlock> codec() {return null;}@Override protected void spawnFallingLeavesParticle(Level level, BlockPos blockPos, RandomSource randomSource) {}});
+    public static final DeferredBlock<Block> RUBBER_SAPLING=registerBlock("rubber_sapling",properties -> new SaplingBlock(ModTreeGrowers.RUBBER_TREE,properties.noCollision()));
 
 
 

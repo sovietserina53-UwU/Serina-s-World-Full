@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,9 +27,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 add(ModBlocks.getRK(ModBlocks.RUBBER_WOOD.get())).
                 add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get())).
                 add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_LOG.get())).
-                add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_WOOD.get())).
-                add(ModBlocks.getRK(ModBlocks.CUT_RUBBER_LOG.get())).
-                add(ModBlocks.getRK(ModBlocks.CUT_STRIPPED_RUBBER_LOG.get()))
-
+                add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_WOOD.get()));
+        tag(BlockTags.MINEABLE_WITH_HOE).
+                add(ModBlocks.getRK(ModBlocks.RUBBER_LEAVES.get()));
+        tag(BlockTags.PLANKS).add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get()))
         ;}
+
 }
