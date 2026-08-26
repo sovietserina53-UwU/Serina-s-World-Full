@@ -45,6 +45,8 @@ public class CutRubberLogBlock extends BaseEntityBlock {
                 {
                     cutRubberLogBE.state++;
                     System.out.println(cutRubberLogBE.state);
+                    cutRubberLogBE.setChanged();
+                    cutRubberLogBE.getLevel().sendBlockUpdated(pos,state,state,Block.UPDATE_ALL);
                 }
             }
         }
@@ -65,6 +67,8 @@ public class CutRubberLogBlock extends BaseEntityBlock {
                     cutRubberLogBE.Latex--;
                     itemStack.shrink(1);
                     player.addItem(new ItemStack(ModItems.FRESH_BOWL_OF_LATEX.get()));
+                    cutRubberLogBE.setChanged();
+                    cutRubberLogBE.getLevel().sendBlockUpdated(pos,state,state,Block.UPDATE_ALL);
                 }
             }
         }
