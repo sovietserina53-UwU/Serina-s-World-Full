@@ -3,6 +3,7 @@ package com.serina.fullEdition.Config;
 import com.serina.fullEdition.Blocks.ModBlockEntities;
 import com.serina.fullEdition.Blocks.ModBlocks;
 import com.serina.fullEdition.Items.ModItems;
+import com.serina.fullEdition.Menus.ModMenus;
 import com.serina.fullEdition.ModCreativeTabs;
 import org.slf4j.Logger;
 
@@ -31,6 +32,7 @@ public class SerinasWorldFullEdition {
         ModItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenus.register(modEventBus);
 
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

@@ -4,6 +4,8 @@ import com.serina.fullEdition.Blocks.ModBlockEntities;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.CutRubberLog.CutRubberLogBE;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.CutRubberLog.CutRubberLogBER;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
+import com.serina.fullEdition.Menus.BlockMenus.SimpleJar.SimpleJarScreen;
+import com.serina.fullEdition.Menus.ModMenus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.resources.model.ModelDebugName;
@@ -17,6 +19,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.client.model.standalone.SimpleUnbakedStandaloneModel;
@@ -45,6 +48,13 @@ public class SerinasWorldFullEditionClient {
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event)
     {
         event.registerBlockEntityRenderer(ModBlockEntities.CUT_RUBBER_LOG_BE.get(), CutRubberLogBER::new);
+    }
+
+
+    @SubscribeEvent
+    public static void resgisterMenus(RegisterMenuScreensEvent event)
+    {
+        event.register(ModMenus.SIMPLEJAR_MENU.get(), SimpleJarScreen::new);
     }
 
     public static final StandaloneModelKey<QuadCollection> CUT_RUBBER_LOG1 = new StandaloneModelKey<>(new ModelDebugName() {@Override public String debugName() {return "examplemod: Example Model";}});

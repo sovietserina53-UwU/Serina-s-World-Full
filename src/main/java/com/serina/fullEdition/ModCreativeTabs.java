@@ -41,6 +41,7 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.CUT_STRIPPED_RUBBER_LOG);
                 output.accept(ModBlocks.RUBBER_LEAVES);
                 output.accept(ModBlocks.RUBBER_SAPLING);
+                output.accept(ModBlocks.SIMPLE_JAR);
 
             }).build());
     public static final Supplier<CreativeModeTab> TOOLS=CREATIVE_MODE_TAB.register("tools",()-> CreativeModeTab.builder().
