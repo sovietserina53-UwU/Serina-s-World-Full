@@ -41,7 +41,7 @@ public class SimpleJarBlock extends BaseEntityBlock {
                 }
                 else if(!player.isCrouching())
                 {
-                    SimpleJarRecipiesHelper.BucketInteraction(itemStack,simpleJarBE);
+                    SimpleJarRecipiesHelper.BucketInteraction(itemStack,level,pos,player);
                 }
             }
         }

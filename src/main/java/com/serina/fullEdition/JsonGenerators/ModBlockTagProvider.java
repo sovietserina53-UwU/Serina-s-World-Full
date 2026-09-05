@@ -2,10 +2,12 @@ package com.serina.fullEdition.JsonGenerators;
 
 import com.serina.fullEdition.Blocks.ModBlocks;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
+import com.serina.fullEdition.Items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
@@ -30,7 +32,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_WOOD.get()));
         tag(BlockTags.MINEABLE_WITH_HOE).
                 add(ModBlocks.getRK(ModBlocks.RUBBER_LEAVES.get()));
-        tag(BlockTags.PLANKS).add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get()))
-        ;}
+        tag(BlockTags.PLANKS).add(ModBlocks.getRK(ModBlocks.RUBBER_PLANKS.get()));
+        tag(BlockTags.PREVENTS_NEARBY_LEAF_DECAY).
+                add(ModBlocks.getRK(ModBlocks.RUBBER_LOG.get())).
+                add(ModBlocks.getRK(ModBlocks.STRIPPED_RUBBER_LOG.get()));
+
+    }
 
 }

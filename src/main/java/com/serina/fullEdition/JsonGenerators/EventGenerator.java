@@ -29,6 +29,7 @@ public class EventGenerator {
 
         dataGenerator.addProvider(true, new ModModelProvider(packOutput));
         dataGenerator.addProvider(true, new ModBlockTagProvider(packOutput, lookUpProvider));
+        dataGenerator.addProvider(true, new ModItemTagProvider(packOutput, lookUpProvider));
         dataGenerator.addProvider(true,new LootTableProvider(packOutput, Collections.emptySet(), List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)),lookUpProvider));
         dataGenerator.addProvider(true,new ModRecipeProvider.runner(packOutput,lookUpProvider));
         event.getGenerator().addProvider(true,new ModDataPackProvider(event.getGenerator().getPackOutput(),event.getLookupProvider()

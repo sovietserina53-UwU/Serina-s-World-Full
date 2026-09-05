@@ -2,6 +2,8 @@ package com.serina.fullEdition.Items;
 
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
 import com.serina.fullEdition.Items.Types.ToolsAndWeapons.KnifeItem;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.neoforged.bus.api.IEventBus;
@@ -23,6 +25,10 @@ public class ModItems {
     public static final DeferredItem<Item> SHARP_STICK= ITEMS.registerItem("sharp_stick",properties->new KnifeItem(properties.sword(ToolMaterial.WOOD,2.0f,1.2f).durability(5)));
     public static final DeferredItem<Item> RUDIMENTARY_BLADE= ITEMS.registerItem("rudimentary_blade",properties -> new KnifeItem(properties.sword(ToolMaterial.STONE,4.0f,1.5f).durability(6)));
     public static final DeferredItem<Item> IRON_KNIFE= ITEMS.registerItem("iron_knife",properties->new KnifeItem(properties.sword(ToolMaterial.IRON,6.0f,1.8f).durability(7)));
+
+    public static ResourceKey<Item> getItemRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
     public static void register(IEventBus eventBus){ITEMS.register(eventBus);}
 }

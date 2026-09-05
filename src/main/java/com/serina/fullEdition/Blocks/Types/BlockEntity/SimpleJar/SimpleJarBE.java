@@ -16,24 +16,18 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.transfer.access.ItemAccess;
 import net.neoforged.neoforge.transfer.fluid.FluidStacksResourceHandler;
 import net.neoforged.neoforge.transfer.item.ItemResource;
 import net.neoforged.neoforge.transfer.item.ItemStacksResourceHandler;
 import net.neoforged.neoforge.transfer.transaction.Transaction;
-import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 import org.jspecify.annotations.Nullable;
 
 
@@ -42,7 +36,7 @@ import java.util.*;
 public class SimpleJarBE extends BlockEntity implements MenuProvider {
 
     public FluidStacksResourceHandler fluids=
-            new FluidStacksResourceHandler(2,0);
+            new FluidStacksResourceHandler(2,1000);
     public int progreso=0;
     public List<ItemResource> ListOfItems= new ArrayList<>();
 
@@ -62,7 +56,9 @@ public class SimpleJarBE extends BlockEntity implements MenuProvider {
 
     public void tick(Level level,BlockPos pos,BlockState state)
     {
-        Map<ItemResource,Integer> current=new HashMap<>();
+        SimpleJarRecipiesHelper.RecipeChecker(this);
+        /*Map<ItemResource,Integer> current=new HashMap<>();
+        Map<Fluid,Integer> currentfluid=new HashMap<>();
         for(int i=0;i<9;i++)
             {
                 if(!inventorya.getResource(i).isEmpty())
@@ -71,10 +67,14 @@ public class SimpleJarBE extends BlockEntity implements MenuProvider {
                     current.put(inventorya.getResource(i),cantidad+1);
                 }
             }
+        for(int i=0;i<fluids.size();i++)
+        {
+            currentfluid.put(fluids.getResource(i).getFluid(),fluids.getAmountAsInt(i));
+        }
 
         for(SimpleJarRecipiesHelper.Recipes recipes:SimpleJarRecipiesHelper.RepicesList())
         {
-            if(current.equals(recipes.mapp()))
+            if(current.equals(recipes.itemmapin())&&currentfluid.equals(recipes.fluidmapin()))
             {
                 progreso++;
                 if(progreso>=recipes.time())
@@ -92,14 +92,14 @@ public class SimpleJarBE extends BlockEntity implements MenuProvider {
                         }
                         transaction.commit();
                     }
-                    if(recipes.output()!=null)
+                    if(recipes.itemout()!=null)
                     {try (Transaction transaction = Transaction.openRoot())
                     {
-                        for(int i=0;i<recipes.output().size();i++)
+                        for(int i=0;i<recipes.itemout().size();i++)
                         {
                             if(inventorya.getResource(i).isEmpty())
                             {
-                                inventorya.insert(recipes.output().get(i),1,transaction);
+                                inventorya.insert(recipes.itemout().get(i),1,transaction);
                             }
                         }
                         transaction.commit();
@@ -108,7 +108,7 @@ public class SimpleJarBE extends BlockEntity implements MenuProvider {
 
                 }
             }
-        }
+        }*/
 
     }
 

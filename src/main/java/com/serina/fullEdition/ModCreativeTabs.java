@@ -35,6 +35,7 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.SUGAR_CANE_BLOCK);
                 output.accept(ModBlocks.RUBBER_LOG);
                 output.accept(ModBlocks.STRIPPED_RUBBER_LOG);
+                output.accept(ModBlocks.RUBBER_PLANKS);
                 output.accept(ModBlocks.RUBBER_WOOD);
                 output.accept(ModBlocks.STRIPPED_RUBBER_WOOD);
                 output.accept(ModBlocks.CUT_RUBBER_LOG);

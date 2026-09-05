@@ -30,6 +30,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_RUBBER_WOOD.get());
         add(ModBlocks.RUBBER_LEAVES.get(),createLeavesDrops(ModBlocks.RUBBER_LEAVES.get(), ModBlocks.RUBBER_SAPLING.get(),0.5f));
         dropSelf(ModBlocks.RUBBER_SAPLING.get());
+        dropSelf(ModBlocks.SIMPLE_JAR.get());
 
     }
 
