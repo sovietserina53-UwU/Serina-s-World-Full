@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "serinasworldfulledition:block/cork_sapling"
+  }
+}

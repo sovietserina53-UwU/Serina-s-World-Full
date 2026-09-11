@@ -42,6 +42,11 @@ public class ModCreativeTabs {
                 output.accept(ModBlocks.CUT_STRIPPED_RUBBER_LOG);
                 output.accept(ModBlocks.RUBBER_LEAVES);
                 output.accept(ModBlocks.RUBBER_SAPLING);
+                output.accept(ModBlocks.CORK_LOG);
+                output.accept(ModBlocks.STRIPPED_CORK_LOG);
+                output.accept(ModBlocks.CORK_PLANKS);
+                output.accept(ModBlocks.CORK_LEAVES);
+                output.accept(ModBlocks.CORK_SAPLING);
                 output.accept(ModBlocks.SIMPLE_JAR);
 
             }).build());

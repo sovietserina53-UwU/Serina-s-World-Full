@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,states=1": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,states=2": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,states=1": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state1"
+    },
+    "axis=y,states=2": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state2"
+    },
+    "axis=z,states=1": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state1",
+      "x": 90
+    },
+    "axis=z,states=2": {
+      "model": "serinasworldfulledition:block/stripped_cork_log_state2",
+      "x": 90
+    }
+  }
+}

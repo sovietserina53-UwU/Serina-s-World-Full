@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "serinasworldfulledition:block/cork_log_top",
+    "side": "serinasworldfulledition:block/cork_log_side"
+  }
+}

@@ -3,6 +3,7 @@ package com.serina.fullEdition.Blocks;
 import com.mojang.serialization.MapCodec;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.CutRubberLog.CutRubberLogBlock;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.SimpleJar.SimpleJarBlock;
+import com.serina.fullEdition.Blocks.Types.NormalBlock.CorkLogBlock;
 import com.serina.fullEdition.Blocks.Types.NormalBlock.RubberLogBlock;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
 import com.serina.fullEdition.Items.ModItems;
@@ -44,6 +45,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> RUBBER_LEAVES=registerBlock("rubber_leaves",properties -> new LeavesBlock(0.1f,properties) {@Override public MapCodec<? extends LeavesBlock> codec() {return null;}@Override protected void spawnFallingLeavesParticle(Level level, BlockPos blockPos, RandomSource randomSource) {}});
     public static final DeferredBlock<Block> RUBBER_SAPLING=registerBlock("rubber_sapling",properties -> new SaplingBlock(ModTreeGrowers.RUBBER_TREE,properties.noCollision()));
     //************************************
+
+    //corkOak Blocks
+    public static final DeferredBlock<Block> CORK_LOG=registerBlock("cork_log",properties -> new RotatedPillarBlock(properties));
+    public static final DeferredBlock<Block> STRIPPED_CORK_LOG=registerBlock("stripped_cork_log",properties -> new CorkLogBlock(properties.randomTicks()));
+    public static final DeferredBlock<Block> CORK_PLANKS=registerBlock("cork_planks",properties -> new Block(properties));
+    public static final DeferredBlock<Block> CORK_LEAVES=registerBlock("cork_leaves",properties -> new LeavesBlock(0.1f,properties) {@Override public MapCodec<? extends LeavesBlock> codec() {return null;}@Override protected void spawnFallingLeavesParticle(Level level, BlockPos blockPos, RandomSource randomSource) {}});
+    public static final DeferredBlock<Block> CORK_SAPLING=registerBlock("cork_sapling",properties -> new SaplingBlock(ModTreeGrowers.CORK_TREE,properties.noCollision()));
+    //**************************************
 
     //moreComplexBlocks
     public static final DeferredBlock<Block> SIMPLE_JAR=registerBlock("simple_jar",properties -> new SimpleJarBlock(properties));

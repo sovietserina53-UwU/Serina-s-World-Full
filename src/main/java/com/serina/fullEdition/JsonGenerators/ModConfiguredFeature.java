@@ -20,6 +20,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 public class ModConfiguredFeature {
 
     public static final ResourceKey<ConfiguredFeature<?,?>> RUBBER_KEY=registerkey("rubber_key");
+    public static final ResourceKey<ConfiguredFeature<?,?>> CORK_KEY=registerkey("cork_key");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?,?>> bootstrapContext)
     {
@@ -28,6 +29,16 @@ public class ModConfiguredFeature {
                         BlockStateProvider.simple(ModBlocks.RUBBER_LOG.get()),
                         new StraightTrunkPlacer(10,0,0),
                         BlockStateProvider.simple(ModBlocks.RUBBER_LEAVES.get()),
+                        new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),3),
+                        new TwoLayersFeatureSize(1,0,1),
+                        BlockStateProvider.simple(Blocks.DIRT)
+
+                ).build());
+        register(bootstrapContext,CORK_KEY,Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder
+                (
+                        BlockStateProvider.simple(ModBlocks.CORK_LOG.get()),
+                        new StraightTrunkPlacer(10,0,0),
+                        BlockStateProvider.simple(ModBlocks.CORK_LEAVES.get()),
                         new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(0),3),
                         new TwoLayersFeatureSize(1,0,1),
                         BlockStateProvider.simple(Blocks.DIRT)

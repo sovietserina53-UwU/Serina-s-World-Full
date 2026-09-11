@@ -21,15 +21,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.SALT_BLOCK.get());
         dropSelf(ModBlocks.SUGAR_CANE_BLOCK.get());
+
         dropSelf(ModBlocks.RUBBER_LOG.get());
         dropSelf(ModBlocks.RUBBER_WOOD.get());
         dropSelf(ModBlocks.RUBBER_PLANKS.get());
-
-
         dropSelf(ModBlocks.STRIPPED_RUBBER_LOG.get());
         dropSelf(ModBlocks.STRIPPED_RUBBER_WOOD.get());
-        add(ModBlocks.RUBBER_LEAVES.get(),createLeavesDrops(ModBlocks.RUBBER_LEAVES.get(), ModBlocks.RUBBER_SAPLING.get(),0.5f));
+        add(ModBlocks.RUBBER_LEAVES.get(),createLeavesDrops(ModBlocks.RUBBER_LEAVES.get(), ModBlocks.RUBBER_SAPLING.get(),0.02f));
         dropSelf(ModBlocks.RUBBER_SAPLING.get());
+
+        dropSelf(ModBlocks.CORK_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_CORK_LOG.get());
+        dropSelf(ModBlocks.CORK_PLANKS.get());
+        add(ModBlocks.CORK_LEAVES.get(),createLeavesDrops(ModBlocks.CORK_LEAVES.get(),ModBlocks.CORK_SAPLING.get(),0.02f));
+        dropSelf(ModBlocks.CORK_SAPLING.get());
+
         dropSelf(ModBlocks.SIMPLE_JAR.get());
 
     }

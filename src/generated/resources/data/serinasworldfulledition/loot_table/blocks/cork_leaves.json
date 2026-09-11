@@ -36,7 +36,7 @@
                   ]
                 }
               ],
-              "name": "serinasworldfulledition:rubber_leaves"
+              "name": "serinasworldfulledition:cork_leaves"
             },
             {
               "type": "minecraft:item",
@@ -52,7 +52,7 @@
                   "enchantment": "minecraft:fortune"
                 }
               ],
-              "name": "serinasworldfulledition:rubber_sapling"
+              "name": "serinasworldfulledition:cork_sapling"
             }
           ]
         }
@@ -126,5 +126,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "serinasworldfulledition:blocks/rubber_leaves"
+  "random_sequence": "serinasworldfulledition:blocks/cork_leaves"
 }
