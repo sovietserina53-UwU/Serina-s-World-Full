@@ -36,7 +36,19 @@ import java.util.*;
 public class SimpleJarBE extends BlockEntity implements MenuProvider {
 
     public FluidStacksResourceHandler fluids=
-            new FluidStacksResourceHandler(2,1000);
+            new FluidStacksResourceHandler(10,1000);
+    public int TotalFluid;
+    public void  TotalFluid()
+    {
+        for(int i=0;i<fluids.size();i++)
+        {
+            if(fluids.getAmountAsInt(i)>0)
+            {
+                TotalFluid=TotalFluid+fluids.getAmountAsInt(i);
+            }
+
+        }
+    }
     public int progreso=0;
     public List<ItemResource> ListOfItems= new ArrayList<>();
 

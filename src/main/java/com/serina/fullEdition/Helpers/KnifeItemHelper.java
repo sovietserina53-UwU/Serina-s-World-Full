@@ -35,8 +35,6 @@ public class KnifeItemHelper {
 
             );
     }
-
-
     //List of the block you click, the block it turns into, the items it may drop and the amount
     public record outputRecord(Predicate<BlockState> blockinput, Function<UseOnContext, BlockState> blockout, Item item, Integer amount){}
     public static List<outputRecord> outputRecordList()
