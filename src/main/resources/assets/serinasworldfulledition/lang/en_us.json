@@ -1,28 +1,31 @@
 {
  "item.serinasworldfulledition.salt": "Salt",
- "item.serinasworldfulledition.sharp_stick": "Sharp Stick",
- "item.serinasworldfulledition.fresh_bowl_of_latex": "Fresh Bowl of Latex",
  "item.serinasworldfulledition.pebble": "Pebble",
  "item.serinasworldfulledition.sharp_pebble": "Sharp Pebble",
- "item.serinasworldfulledition.rudimentary_blade": "Rudimentary Blade",
- "item.serinasworldfulledition.iron_knife": "Iron Knife",
-
-
-
+ "item.serinasworldfulledition.fresh_bowl_of_latex": "Fresh Bowl of Latex",
+ "item.serinasworldfulledition.cork_bark": "Cork Bark",
 
  "block.serinasworldfulledition.salt_block": "Salt Block",
  "block.serinasworldfulledition.sugar_cane_block": "Sugar Cane Block",
  "block.serinasworldfulledition.rubber_log": "Rubber Log",
  "block.serinasworldfulledition.stripped_rubber_log": "Stripped Rubber Log",
+ "block.serinasworldfulledition.rubber_planks": "Rubber Planks",
+ "block.serinasworldfulledition.rubber_wood": "Rubber Wood",
+ "block.serinasworldfulledition.stripped_rubber_wood": "Stripped Rubber Wood",
  "block.serinasworldfulledition.cut_rubber_log": "Cut Rubber Log",
  "block.serinasworldfulledition.cut_stripped_rubber_log": "Cut Stripped Rubber Log",
- "block.serinasworldfulledition.Stripped_rubber_log": "Stripped Rubber Log",
- "block.serinasworldfulledition.rubber_wood": "Rubber Wood",
- "block.serinasworldfulledition.rubber_planks": "Rubber Planks",
  "block.serinasworldfulledition.rubber_leaves": "Rubber Leaves",
  "block.serinasworldfulledition.rubber_sapling": "Rubber Sapling",
+ "block.serinasworldfulledition.cork_log": "Cork Log",
+ "block.serinasworldfulledition.stripped_cork_log": "Stripped Cork Log",
+ "block.serinasworldfulledition.cork_planks": "Cork Planks",
+ "block.serinasworldfulledition.cork_leaves": "Cork Leaves",
+ "block.serinasworldfulledition.cork_sapling": "Cork Sapling",
+ "block.serinasworldfulledition.simple_jar": "Simple Jar",
 
-
+ "item.serinasworldfulledition.sharp_stick": "Sharp Stick",
+ "item.serinasworldfulledition.rudimentary_blade": "Rudimentary Blade",
+ "item.serinasworldfulledition.iron_knife": "Iron Knife",
 
  "creativetab.serinasworldfulledition.items": "Items",
  "creativetab.serinasworldfulledition.blocks": "Blocks",

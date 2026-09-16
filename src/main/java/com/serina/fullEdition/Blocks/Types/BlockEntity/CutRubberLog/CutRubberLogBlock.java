@@ -11,9 +11,11 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +23,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.BlockHitResult;
+import net.neoforged.neoforge.common.ItemAbility;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import org.jspecify.annotations.Nullable;
 
@@ -56,13 +59,10 @@ public class CutRubberLogBlock extends BaseEntityBlock {
     protected InteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if(!level.isClientSide())
         {
-            System.out.println("nonclientpass");
             if(level.getBlockEntity(pos) instanceof CutRubberLogBE cutRubberLogBE)
             {
-                System.out.println("instancepass");
                 if(cutRubberLogBE.Latex>0&&cutRubberLogBE.state==3&&itemStack.is(Items.BOWL))
                 {
-                    System.out.println("all this shite pass");
                     cutRubberLogBE.state=0;
                     cutRubberLogBE.Latex--;
                     itemStack.shrink(1);

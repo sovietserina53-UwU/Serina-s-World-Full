@@ -1,22 +1,19 @@
 package com.serina.fullEdition.Helpers;
 
 import com.serina.fullEdition.Blocks.ModBlocks;
+import com.serina.fullEdition.Blocks.Types.NormalBlock.StrippedCorkLogBlock;
 import com.serina.fullEdition.Blocks.Types.NormalBlock.RubberLogBlock;
 import com.serina.fullEdition.Items.ModItems;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -46,7 +43,9 @@ public class KnifeItemHelper {
                         new outputRecord(state->state.is(Blocks.MELON),context -> {return Blocks.AIR.defaultBlockState();},Items.MELON_SLICE,7),
                         new outputRecord(state->state.is(ModBlocks.SUGAR_CANE_BLOCK),context -> {return Blocks.AIR.defaultBlockState();},Items.SUGAR_CANE,9),
                         new outputRecord(state->state.is(ModBlocks.RUBBER_LOG)&&state.getValue(RubberLogBlock.CUT_ABLE)&&state.getValue(RubberLogBlock.AXIS)== Direction.Axis.Y, context -> {return ModBlocks.CUT_RUBBER_LOG.get().defaultBlockState().setValue(FACING,context.getClickedFace());},null,null),
-                        new outputRecord(state->state.is(ModBlocks.STRIPPED_RUBBER_LOG)&&state.getValue(RubberLogBlock.CUT_ABLE)&&state.getValue(RubberLogBlock.AXIS)== Direction.Axis.Y,context -> {return ModBlocks.CUT_STRIPPED_RUBBER_LOG.get().defaultBlockState().setValue(FACING,context.getClickedFace());},null,null)
+                        new outputRecord(state->state.is(ModBlocks.STRIPPED_RUBBER_LOG)&&state.getValue(RubberLogBlock.CUT_ABLE)&&state.getValue(RubberLogBlock.AXIS)== Direction.Axis.Y,context -> {return ModBlocks.CUT_STRIPPED_RUBBER_LOG.get().defaultBlockState().setValue(FACING,context.getClickedFace());},null,null),
+                        new outputRecord(state -> state.is(ModBlocks.STRIPPED_CORK_LOG)&&state.getValue(StrippedCorkLogBlock.Ruined)==false, context -> {return ModBlocks.STRIPPED_CORK_LOG.get().defaultBlockState().setValue(StrippedCorkLogBlock.Ruined,true).setValue(StrippedCorkLogBlock.AXIS,context.getClickedFace().getAxis());},null,null),
+                        new outputRecord(state -> state.is(ModBlocks.CORK_LOG), context -> {return ModBlocks.STRIPPED_CORK_LOG.get().defaultBlockState().setValue(StrippedCorkLogBlock.Ruined,true).setValue(StrippedCorkLogBlock.AXIS, context.getClickedFace().getAxis());},ModItems.CORK_BARK.get(),1)
 
                 );}
 }

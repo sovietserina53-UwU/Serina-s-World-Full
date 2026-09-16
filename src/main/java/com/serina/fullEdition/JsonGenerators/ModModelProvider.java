@@ -1,7 +1,7 @@
 package com.serina.fullEdition.JsonGenerators;
 
 import com.serina.fullEdition.Blocks.ModBlocks;
-import com.serina.fullEdition.Blocks.Types.NormalBlock.CorkLogBlock;
+import com.serina.fullEdition.Blocks.Types.NormalBlock.StrippedCorkLogBlock;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
 import com.serina.fullEdition.Items.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -13,14 +13,11 @@ import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TextureSlot;
 import net.minecraft.client.data.models.model.TexturedModel;
-import net.minecraft.client.gui.components.debug.DebugEntrySoundMood;
-import net.minecraft.client.renderer.block.BuiltInBlockModels;
 import net.minecraft.client.renderer.block.dispatch.Variant;
 import net.minecraft.client.renderer.block.dispatch.VariantMutator;
-import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.level.block.FurnaceBlock;
+import net.neoforged.fml.common.Mod;
 
 
 public class ModModelProvider extends ModelProvider {
@@ -39,6 +36,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.RUDIMENTARY_BLADE.get(),ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.IRON_KNIFE.get(),ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.FRESH_BOWL_OF_LATEX.get(),ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.CORK_BARK.get(),ModelTemplates.FLAT_ITEM);
         //itemModels.generateFlatItem(ModBlocks.CORK_LOG.asItem(),ModelTemplates.CUBE_COLUMN);
 
 
@@ -64,7 +62,7 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createRotatedPillarWithHorizontalVariant(ModBlocks.CORK_LOG.get(),TexturedModel.COLUMN,TexturedModel.COLUMN_HORIZONTAL);
         Identifier colomnBlock=TexturedModel.COLUMN.create(ModBlocks.STRIPPED_CORK_LOG.get(),blockModels.modelOutput);
         Variant variant=new Variant(colomnBlock);
-        blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.STRIPPED_CORK_LOG.get(), BlockModelGenerators.variant(variant)).with(BlockModelGenerators.createRotatedPillar()).with(PropertyDispatch.modify(CorkLogBlock.STATES).select(1, VariantMutator.MODEL.withValue(Identifier.fromNamespaceAndPath(SerinasWorldFullEdition.MODID, "block/stripped_cork_log_state1"))).select(2,VariantMutator.MODEL.withValue(Identifier.fromNamespaceAndPath(SerinasWorldFullEdition.MODID, "block/stripped_cork_log_state2")))));
+        blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.STRIPPED_CORK_LOG.get(), BlockModelGenerators.variant(variant)).with(BlockModelGenerators.createRotatedPillar()).with(PropertyDispatch.modify(StrippedCorkLogBlock.STATES).select(1, VariantMutator.MODEL.withValue(Identifier.fromNamespaceAndPath(SerinasWorldFullEdition.MODID, "block/stripped_cork_log_state1"))).select(2,VariantMutator.MODEL.withValue(Identifier.fromNamespaceAndPath(SerinasWorldFullEdition.MODID, "block/stripped_cork_log_state2")))));
         blockModels.createTrivialCube(ModBlocks.CORK_LEAVES.get());
         blockModels.createTrivialCube(ModBlocks.CORK_PLANKS.get());
         blockModels.createCrossBlock(ModBlocks.CORK_SAPLING.get(), BlockModelGenerators.PlantType.NOT_TINTED);

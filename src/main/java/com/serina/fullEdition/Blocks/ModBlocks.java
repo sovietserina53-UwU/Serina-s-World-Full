@@ -4,10 +4,10 @@ import com.mojang.serialization.MapCodec;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.CutRubberLog.CutRubberLogBlock;
 import com.serina.fullEdition.Blocks.Types.BlockEntity.SimpleJar.SimpleJarBlock;
 import com.serina.fullEdition.Blocks.Types.NormalBlock.CorkLogBlock;
+import com.serina.fullEdition.Blocks.Types.NormalBlock.StrippedCorkLogBlock;
 import com.serina.fullEdition.Blocks.Types.NormalBlock.RubberLogBlock;
 import com.serina.fullEdition.Config.SerinasWorldFullEdition;
 import com.serina.fullEdition.Items.ModItems;
-import com.serina.fullEdition.JsonGenerators.ModConfiguredFeature;
 import com.serina.fullEdition.JsonGenerators.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,7 +17,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.IEventBus;
@@ -47,8 +46,8 @@ public class ModBlocks {
     //************************************
 
     //corkOak Blocks
-    public static final DeferredBlock<Block> CORK_LOG=registerBlock("cork_log",properties -> new RotatedPillarBlock(properties));
-    public static final DeferredBlock<Block> STRIPPED_CORK_LOG=registerBlock("stripped_cork_log",properties -> new CorkLogBlock(properties.randomTicks()));
+    public static final DeferredBlock<Block> CORK_LOG=registerBlock("cork_log",properties -> new CorkLogBlock(properties));
+    public static final DeferredBlock<Block> STRIPPED_CORK_LOG=registerBlock("stripped_cork_log",properties -> new StrippedCorkLogBlock(properties.randomTicks()));
     public static final DeferredBlock<Block> CORK_PLANKS=registerBlock("cork_planks",properties -> new Block(properties));
     public static final DeferredBlock<Block> CORK_LEAVES=registerBlock("cork_leaves",properties -> new LeavesBlock(0.1f,properties) {@Override public MapCodec<? extends LeavesBlock> codec() {return null;}@Override protected void spawnFallingLeavesParticle(Level level, BlockPos blockPos, RandomSource randomSource) {}});
     public static final DeferredBlock<Block> CORK_SAPLING=registerBlock("cork_sapling",properties -> new SaplingBlock(ModTreeGrowers.CORK_TREE,properties.noCollision()));

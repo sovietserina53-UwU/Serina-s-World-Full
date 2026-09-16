@@ -17,6 +17,7 @@ public class ModItems {
     public static final DeferredItem<Item> SALT= ITEMS.registerSimpleItem("salt");
     public static final DeferredItem<Item> PEBBLE= ITEMS.registerItem("pebble",properties -> new Item(properties));
     public static final DeferredItem<Item> FRESH_BOWL_OF_LATEX=ITEMS.registerItem("fresh_bowl_of_latex",properties -> new Item(properties));
+    public static final DeferredItem<Item> CORK_BARK=ITEMS.registerItem("cork_bark",properties -> new Item(properties));
 
 
     public static final DeferredItem<Item> SHARP_PEBBLE= ITEMS.registerItem("sharp_pebble",properties -> new Item(properties));

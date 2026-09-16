@@ -25,6 +25,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.PEBBLE);
                 output.accept(ModItems.SHARP_PEBBLE);
                 output.accept(ModItems.FRESH_BOWL_OF_LATEX);
+                output.accept(ModItems.CORK_BARK);
 
             }).build());
     public static final Supplier<CreativeModeTab> BLOCKS=CREATIVE_MODE_TAB.register("blocks",()-> CreativeModeTab.builder().
